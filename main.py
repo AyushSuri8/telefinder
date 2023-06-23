@@ -27,7 +27,7 @@ def main():
 
     # Verificar si el archivo existe
     if os.path.exists(file_path):
-        with open(file_path, "r") as file:
+        with open(file_path, "r", encoding="latin-1") as file:
             usernames = file.read().splitlines()
             progress_bar = tqdm(usernames, desc="Checking usernames", unit="username")
             for username in progress_bar:
