@@ -24,7 +24,7 @@ def main():
     valid_usernames = []
     file_path = os.path.join(os.path.dirname(__file__), "words.txt")
     valid_file_path = os.path.join(os.path.dirname(__file__), "valid.txt")
-    
+
     # Verificar si el archivo existe
     if os.path.exists(file_path):
         with open(file_path, "r") as file:
@@ -33,16 +33,16 @@ def main():
             for username in progress_bar:
                 if check_username(username):
                     valid_usernames.append(username)
-        
+
         with open(valid_file_path, "w") as valid_file:
             for username in valid_usernames:
                 valid_file.write(username + "\n")
-        
+
         print("Valid Usernames:")
         for username in valid_usernames:
             print(username)
     else:
-        print(f"El archivo '{file_path}' no existe.")
+        print(f"The file '{file_path}' does not exist.")
 
 if __name__ == "__main__":
     main()
