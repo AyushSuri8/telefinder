@@ -22,7 +22,7 @@ def check_username(username):
 
 def main():
     valid_usernames = []
-    file_path = os.path.join(os.path.dirname(__file__), "list.txt")
+    file_path = os.path.join(os.path.dirname(__file__), "words.txt")
     valid_file_path = os.path.join(os.path.dirname(__file__), "valid.txt")
     
     # Verificar si el archivo existe
